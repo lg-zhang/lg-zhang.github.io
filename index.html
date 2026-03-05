@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Linguang Zhang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f6f8fc;
+        --card: #ffffff;
+        --text: #122033;
+        --muted: #4f6179;
+        --line: #dbe3ef;
+        --accent: #0b5fff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", "Segoe UI", sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 5% 0%, #eef4ff, var(--bg) 45%);
+        line-height: 1.55;
+      }
+
+      .container {
+        width: min(980px, 92vw);
+        margin: 2.2rem auto 3rem;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(13, 33, 67, 0.06);
+        padding: 1.35rem;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 1.2rem;
+        align-items: center;
+      }
+
+      .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 14px;
+        object-fit: cover;
+        border: 1px solid var(--line);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.6rem, 4vw, 2rem);
+      }
+
+      .subtitle {
+        margin: 0.35rem 0;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .contact {
+        margin: 0.2rem 0 0.9rem;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      h2 {
+        margin: 2rem 0 0.85rem;
+        font-size: 1.15rem;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .pub-list {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .pub-item {
+        display: grid;
+        grid-template-columns: 225px minmax(0, 1fr);
+        gap: 0.9rem;
+        padding: 0.95rem;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fbfcff;
+      }
+
+      .pub-thumb {
+        width: 225px;
+        height: 168px;
+        max-width: 225px;
+        object-fit: contain;
+        justify-self: center;
+        align-self: center;
+      }
+
+      .authors {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.93rem;
+      }
+
+      .title {
+        margin: 0.1rem 0;
+        font-weight: 700;
+      }
+
+      .venue {
+        margin: 0;
+        font-size: 0.93rem;
+      }
+
+      .links {
+        margin-top: 0.2rem;
+        font-size: 0.93rem;
+      }
+
+      .links a,
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .links a:hover,
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .me {
+        font-weight: 800;
+        color: #0b3daa;
+      }
+
+      .work-list {
+        display: grid;
+        gap: 0.6rem;
+      }
+
+      .work-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.8rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px dashed var(--line);
+      }
+
+      .work-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .work-role {
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      @media (max-width: 720px) {
+        .container {
+          width: min(980px, 95vw);
+          margin-top: 1.1rem;
+        }
+
+        .card {
+          border-radius: 12px;
+          padding: 1rem;
+        }
+
+        .intro {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .avatar {
+          margin: 0 auto;
+        }
+
+        .pub-item {
+          grid-template-columns: 1fr;
+          text-align: left;
+        }
+
+        .pub-thumb {
+          justify-self: center;
+        }
+
+        .work-item {
+          flex-direction: column;
+          gap: 0.2rem;
+        }
+
+        .work-role {
+          white-space: normal;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="card intro">
+        <img class="avatar" src="assets/profile.jpg" alt="Linguang Zhang" />
+        <div>
+          <h1>Linguang Zhang (張臨光)</h1>
+          <p class="subtitle">Ph.D. in Computer Science</p>
+          <p class="contact">
+            Meta Reality Labs, Redmond, WA |
+            <img id="email-image" alt="Email address image" style="height: 1.4em; vertical-align: -0.18em" /> |
+            <a href="https://scholar.google.com/citations?hl=en&user=C7DtSzYAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+          </p>
+          <p>
+            I am a Research Scientist at Meta Reality Labs. My work focuses on computer vision, including real-time on-device
+            egocentric hand/body tracking and efficient generative models. I received my Ph.D. in Computer Science from
+            Princeton University, where I worked with Prof. <a href="https://www.cs.princeton.edu/~smr">Szymon Rusinkiewicz</a>.
+            Before that, I earned my B.Eng. in Computer Engineering from HKUST, advised by Prof.
+            <a href="http://www.cse.ust.hk/~cktang/">Chi-Keung Tang</a>.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Publications</h2>
+        <div class="pub-list">
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/foundhand.png" alt="FoundHand placeholder" />
+            <div>
+              <p class="authors">Kefan Chen, Chaerin Min, <span class="me">Linguang Zhang</span>, Shreyas Hampali, Cem Keskin, Srinath Sridhar</p>
+              <p class="title">FoundHand: Large-Scale Domain-Specific Learning for Controllable Hand Image Generation</p>
+              <p class="venue">Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR), 2025</p>
+              <p class="links">
+                <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_FoundHand_Large-Scale_Domain-Specific_Learning_for_Controllable_Hand_Image_Generation_CVPR_2025_paper.pdf">Paper</a> |
+                <a href="https://ivl.cs.brown.edu/research/foundhand.html">Website</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/hot3d.png" alt="HOT3D placeholder" />
+            <div>
+              <p class="authors">Prithviraj Banerjee, Sindi Shkodrani, Pierre Moulon, Shreyas Hampali, Shangchen Han, Fan Zhang, <span class="me">Linguang Zhang</span>, Jade Fountain, Edward Miller, Selen Basol, Richard Newcombe, Robert Wang, Jakob Julian Engel, Tomas Hodan</p>
+              <p class="title">HOT3D: Hand and Object Tracking in 3D from Egocentric Multi-View Videos</p>
+              <p class="venue">Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR), 2025</p>
+              <p class="links">
+                <a href="http://openaccess.thecvf.com/content/CVPR2025/papers/Banerjee_HOT3D_Hand_and_Object_Tracking_in_3D_from_Egocentric_Multi-View_CVPR_2025_paper.pdf">Paper</a> |
+                <a href="https://facebookresearch.github.io/hot3d/">Website</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/stegotype.png" alt="StegoType placeholder" />
+            <div>
+              <p class="authors">Mark Richardson, Fadi Botros, Yangyang Shi, Pinhao Guo, Bradford J Snow, <span class="me">Linguang Zhang</span>, Jingming Dong, Keith Vertanen, Shugao Ma, Robert Wang</p>
+              <p class="title">StegoType: Surface Typing from Egocentric Cameras</p>
+              <p class="venue">ACM Symposium on User Interface Software and Technology (UIST), 2024</p>
+              <p class="links">
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3654777.3676343">Paper</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/epf.png" alt="EgoPoseFormer placeholder" />
+            <div>
+              <p class="authors">Chenhongyi Yang, Anastasia Tkach, Shreyas Hampali, <span class="me">Linguang Zhang</span>, Elliot J Crowley, Cem Keskin</p>
+              <p class="title">EgoPoseFormer: A Simple Baseline for Stereo Egocentric 3D Human Pose Estimation</p>
+              <p class="venue">European Conference on Computer Vision (ECCV), 2024</p>
+              <p class="links">
+                <a href="https://arxiv.org/pdf/2403.18080?">Paper</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/socialdiff.png" alt="Social diffusion placeholder" />
+            <div>
+              <p class="authors">Julian Tanke, <span class="me">Linguang Zhang</span>, Amy Zhao, Chengcheng Tang, Yujun Cai, Lezi Wang, Po-Chen Wu, Juergen Gall, Cem Keskin</p>
+              <p class="title">Social Diffusion: Long-Term Multiple Human Motion Anticipation</p>
+              <p class="venue">IEEE/CVF International Conference on Computer Vision (ICCV), 2023</p>
+              <p class="links">
+                <a href="http://openaccess.thecvf.com/content/ICCV2023/papers/Tanke_Social_Diffusion_Long-term_Multiple_Human_Motion_Anticipation_ICCV_2023_paper.pdf">Paper</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/uncalibrated_mview.png" alt="Multiview reconstruction placeholder" />
+            <div>
+              <p class="authors">Zhixuan Yu, <span class="me">Linguang Zhang</span>, Yuanlu Xu, Chengcheng Tang, Luan Tran, Cem Keskin, Hyun Soo Park</p>
+              <p class="title">Multiview Human Body Reconstruction from Uncalibrated Cameras</p>
+              <p class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2022</p>
+              <p class="links">
+                <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/33610fba262d7b6fed0810b89f55e147-Paper-Conference.pdf">Paper</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/umetrack.png" alt="UmeTrack placeholder" />
+            <div>
+              <p class="authors">Shangchen Han, Po-chen Wu, Yubo Zhang, Beibei Liu, <span class="me">Linguang Zhang</span>, Zheng Wang, Weiguang Si, Peizhao Zhang, Yujun Cai, Tomas Hodan, Randi Cabezas, Luan Tran, Muzaffer Akbay, Tsz-Ho Yu, Cem Keskin, Robert Wang</p>
+              <p class="title">UmeTrack: Unified Multi-View End-to-End Hand Tracking for VR</p>
+              <p class="venue">SIGGRAPH Asia Conference Papers, 2022</p>
+              <p class="links">
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3550469.3555378">Paper</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/iahme.png" alt="Identity-Aware Hand Mesh Estimation" />
+            <div>
+              <p class="authors">
+                Deying Kong, <span class="me">Linguang Zhang</span>, Liangjian Chen, Haoyu Ma, Xiangyi Yan,
+                Shanlin Sun, Xingwei Liu, Kun Han, Xiaohui Xie
+              </p>
+              <p class="title">Identity-Aware Hand Mesh Estimation and Personalization from RGB Images</p>
+              <p class="venue">European Conference on Computer Vision (ECCV), 2022</p>
+              <p class="links"><a href="#">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/ncf.jpeg" alt="Neural Correspondence Field" />
+            <div>
+              <p class="authors">
+                Lin Huang, Tomas Hodan, Lingni Ma, <span class="me">Linguang Zhang</span>, Luan Tran, Christopher
+                Twigg, Po-Chen Wu, Junsong Yuan, Cem Keskin, Robert Wang
+              </p>
+              <p class="title">Neural Correspondence Field for Object Pose Estimation</p>
+              <p class="venue">European Conference on Computer Vision (ECCV), 2022</p>
+              <p class="links">
+                <a href="https://arxiv.org/pdf/2208.00113.pdf">Paper</a> |
+                <a href="https://linhuang17.github.io/NCF/">Project</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/pu-logo.png" alt="PhD Dissertation" />
+            <div>
+              <p class="authors"><span class="me">Linguang Zhang</span></p>
+              <p class="title">Learning and Deploying Local Features</p>
+              <p class="venue">Ph.D. Dissertation, 2019</p>
+              <p class="links">
+                <a href="https://dataspace.princeton.edu/jspui/handle/88435/dsp01j098zd973">Online Access</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/sat_conv.png" alt="Summed-Area Table Convolution" />
+            <div>
+              <p class="authors"><span class="me">Linguang Zhang</span>, Maciej Halber, Szymon Rusinkiewicz</p>
+              <p class="title">Accelerating Large-Kernel Convolution Using Summed-Area Tables</p>
+              <p class="venue">ArXiv, 2019</p>
+              <p class="links">
+                <a href="https://arxiv.org/pdf/1906.11367.pdf">Paper</a> |
+                <a href="assets/sat-supplemental.zip">Supplemental</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/dsm_descriptor.png" alt="Dynamic Soft Margin" />
+            <div>
+              <p class="authors"><span class="me">Linguang Zhang</span>, Szymon Rusinkiewicz</p>
+              <p class="title">Learning Local Descriptors with a CDF-Based Dynamic Soft Margin</p>
+              <p class="venue">IEEE International Conference on Computer Vision (ICCV), 2019</p>
+              <p class="links">
+                <a href="https://gfx.cs.princeton.edu/pubs/Zhang_2019_LLD/softmargin.pdf">Paper</a> |
+                <a href="https://github.com/lg-zhang/dynamic-soft-margin-pytorch">Code</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/micro_gps.png" alt="Micro GPS" />
+            <div>
+              <p class="authors"><span class="me">Linguang Zhang</span>, Adam Finkelstein, Szymon Rusinkiewicz</p>
+              <p class="title">High-Precision Localization Using Ground Texture</p>
+              <p class="venue">IEEE International Conference on Robotics and Automation (ICRA), 2019</p>
+              <p class="links">
+                <a href="https://pixl.cs.princeton.edu/pubs/Zhang_2019_HLU/microgps-icra19.pdf">Paper</a> |
+                <a href="http://microgps.cs.princeton.edu">Project</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/keypoint_det.jpg" alt="Keypoint Detection" />
+            <div>
+              <p class="authors"><span class="me">Linguang Zhang</span>, Szymon Rusinkiewicz</p>
+              <p class="title">Learning to Detect Features in Texture Images</p>
+              <p class="venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018</p>
+              <p class="links">
+                <a href="http://gfx.cs.princeton.edu/pubs/Zhang_2018_LTD/keypoint-cvpr.pdf">Paper</a> |
+                <a href="http://gfx.cs.princeton.edu/pubs/Zhang_2018_LTD/">Project</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/scanner.png" alt="3D Scanning" />
+            <div>
+              <p class="authors">Xinyi Fan, <span class="me">Linguang Zhang</span>, Benedict Brown, Szymon Rusinkiewicz</p>
+              <p class="title">Automated View and Path Planning for Scalable Multi-Object 3D Scanning</p>
+              <p class="venue">ACM Transactions on Graphics (Proc. SIGGRAPH Asia), 2016</p>
+              <p class="links">
+                <a href="http://gfx.cs.princeton.edu/pubs/Fan_2016_AVA/fan2016.pdf">Paper</a> |
+                <a href="http://gfx.cs.princeton.edu/pubs/Fan_2016_AVA/index.php">Project</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/robotinaroom.jpg" alt="Robot in a Room" />
+            <div>
+              <p class="authors">Shuran Song, <span class="me">Linguang Zhang</span>, Jianxiong Xiao</p>
+              <p class="title">Robot In a Room: Toward Perfect Object Recognition in Closed Environments</p>
+              <p class="venue">ArXiv, 2015</p>
+              <p class="links">
+                <a href="http://3dvision.princeton.edu/projects/2015/RobotInARoom/paper.pdf">Paper</a> |
+                <a href="http://3dvision.princeton.edu/projects/2015/RobotInARoom/">Project</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/3dshapenet.jpg" alt="3D ShapeNets" />
+            <div>
+              <p class="authors">
+                Zhirong Wu, Shuran Song, Aditya Khosla, Fisher Yu, <span class="me">Linguang Zhang</span>, Xiaoou Tang,
+                Jianxiong Xiao
+              </p>
+              <p class="title">3D ShapeNets: A Deep Representation for Volumetric Shapes</p>
+              <p class="venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2015</p>
+              <p class="links">
+                <a href="http://3dvision.princeton.edu/projects/2014/3DShapeNets/paper.pdf">Paper</a> |
+                <a href="http://3dshapenets.cs.princeton.edu/">Project</a>
+              </p>
+            </div>
+          </article>
+
+          <!--
+          Publication Template:
+          <article class="pub-item">
+            <img class="pub-thumb" src="assets/your_image.png" alt="Paper thumbnail" />
+            <div>
+              <p class="authors">Author A, <span class="me">Linguang Zhang</span>, Author C</p>
+              <p class="title">Paper Title</p>
+              <p class="venue">Venue, Year</p>
+              <p class="links"><a href="https://paper-link">Paper</a> | <a href="https://project-link">Project</a></p>
+            </div>
+          </article>
+          -->
+        </div>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+        <div class="card work-list">
+          <div class="work-item">
+            <div>Meta Reality Labs</div>
+            <div class="work-role">Senior Staff Research Scientist, 2019~Now</div>
+          </div>
+          <div class="work-item">
+            <div>Facebook Reality Labs (Oculus Research)</div>
+            <div class="work-role">Research Intern, 2018</div>
+          </div>
+          <div class="work-item">
+            <div>NVIDIA - Visual Computing Research</div>
+            <div class="work-role">Research Intern, 2016</div>
+          </div>
+          <div class="work-item">
+            <div>Intel - Visual Computing Lab</div>
+            <div class="work-role">Research Intern, 2015</div>
+          </div>
+          <div class="work-item">
+            <div>Lenove Research HK</div>
+            <div class="work-role">Intern, 2014</div>
+          </div>
+          <div class="work-item">
+            <div>DJI</div>
+            <div class="work-role">Intern, 2014</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      // Render email as an image at runtime to make scraping harder.
+      (function () {
+        var user = ["z", "h", "a", "n", "g", "l", "g", "9", "2", "1"].join("");
+        var host = ["g", "m", "a", "i", "l", ".", "c", "o", "m"].join("");
+        var email = user + "@" + host;
+        var target = document.getElementById("email-image");
+        if (!target) return;
+
+        var canvas = document.createElement("canvas");
+        var ctx = canvas.getContext("2d");
+        if (!ctx) return;
+        var font = "22px Manrope, Segoe UI, sans-serif";
+        ctx.font = font;
+        var width = Math.ceil(ctx.measureText(email).width) + 4;
+        var height = 35;
+        canvas.width = width;
+        canvas.height = height;
+        ctx.font = font;
+        ctx.fillStyle = "#4f6179";
+        ctx.textBaseline = "middle";
+        ctx.fillText(email, 2, Math.floor(height / 2) + 0.5);
+        target.src = canvas.toDataURL("image/png");
+      })();
+    </script>
+  </body>
+</html>

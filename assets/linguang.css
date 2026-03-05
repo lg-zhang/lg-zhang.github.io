@@ -1,0 +1,80 @@
+body {
+  width: 700px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  line-height: 16pt;
+  border-left: solid thin #000000;
+  border-right: solid thin #000000;
+}
+
+code {
+  font-size: 1.15em;
+}
+
+b {
+  font-weight: 400;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  font-weight: 400;
+}
+
+a:link {
+  color: #385898;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  display: block;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 500;
+}
+
+#paper img {
+  max-width: 160px !important;
+  max-height: 140px !important;
+}
+
+td.paper {
+  padding-left: 30px;
+  font-size: 1em;
+}
+
+table.list td:first-child {
+  width: 450px;
+  font-size: 1em;
+}
+
+table.list {
+  border-spacing: 0px;
+  font-size: 1em;
+}
+
+tr.project {
+  height: 140px;
+}
