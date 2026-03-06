@@ -1,0 +1,9 @@
+{
+  "name": "Print-Your-Own Visa Photo",
+  "short_name": "Visa Print",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f9fc",
+  "theme_color": "#11203d",
+  "icons": []
+}
