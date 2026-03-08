@@ -170,6 +170,22 @@
         white-space: nowrap;
       }
 
+      .tool-list {
+        display: grid;
+        gap: 0.7rem;
+      }
+
+      .tool-item {
+        padding: 0.95rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fbfcff;
+      }
+
+      .tool-item p + p {
+        margin-top: 0.25rem;
+      }
+
       @media (max-width: 720px) {
         .container {
           width: min(980px, 95vw);
@@ -229,6 +245,20 @@
             Before that, I earned my B.Eng. in Computer Engineering from HKUST, advised by Prof.
             <a href="http://www.cse.ust.hk/~cktang/">Chi-Keung Tang</a>.
           </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Demos</h2>
+        <div class="tool-list">
+          <article class="tool-item">
+            <p><strong><a href="flow-matching-lab/">Flow Matching Lab</a></strong></p>
+            <p>Browser-only 2D flow matching playground with drawing, in-browser training, and transport visualization.</p>
+          </article>
+          <article class="tool-item">
+            <p><strong><a href="visa-photo/">Visa Photo</a></strong></p>
+            <p>Browser-based visa photo tool for background cleanup, framing, and export.</p>
+          </article>
         </div>
       </section>
 
